@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "name": "ProjectOne",
+      "path": "ProjectOne",
+      "directive_file": "project_one.md",
+      "status_file": "project_one-status.md"
+    },
+    {
+      "name": "ProjectTwo",
+      "path": "ProjectTwo",
+      "directive_file": "project_two.md",
+      "status_file": "project_two-status.md"
+    },
+    {
+      "name": "ProjectThree",
+      "path": "ProjectThree",
+      "directive_file": "project_three.md",
+      "status_file": "project_three-status.md"
+    }
+  ]
+}

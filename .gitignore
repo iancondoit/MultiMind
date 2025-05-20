@@ -1,0 +1,22 @@
+# Ignore recipe-specific project directories
+/IngredientEngine/
+/NutritionCalc/
+/PageStyler/
+/RecipeDB/
+/output/
+
+# Keep the MultiMind core
+!/MultiMindPM/
+!/multimind.py
+
+# Exclude OS-specific files
+.DS_Store
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+env/
+venv/
+ENV/ 
