@@ -36,4 +36,27 @@ The input to your work comes from `/output/data.json` (created by ProjectOne), a
 4. Update `/reports/status.md` with your progress
 5. For integration with other components:
    - Create handoff documents in `/output/handoffs/` if you need changes to the input format
-   - Follow the API contracts described in your directive 
+   - Follow the API contracts described in your directive
+
+## Completion Reporting
+
+**IMPORTANT**: When you complete a task or milestone from your directives:
+
+1. Update your `/reports/status.md` file with:
+   - Mark task as complete
+   - Update "Last Update" date
+   - Add details in "Current Progress" section
+   - Update "Next Steps" section
+
+2. **NOTIFY THE PM** by running:
+   ```bash
+   cd ..
+   ./multimind.py gather
+   ```
+
+3. Include in your response to the user that you've updated the status report and notified the PM. For example:
+   ```
+   I've completed [task] and updated the status report. The PM has been notified via the MultiMind gather command.
+   ```
+
+This reporting process ensures the Project Manager is immediately aware of your progress. 
