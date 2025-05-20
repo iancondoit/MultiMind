@@ -71,10 +71,18 @@ def sync_files(config: Dict) -> None:
         
         # Copy roadmap.md
         try:
-            shutil.copy("MultiMindPM/roadmap.md", os.path.join(project_path, "roadmap.md"))
-            print(f"  - roadmap.md → {project_path}/roadmap.md")
+            # Check if project-specific roadmap exists
+            project_roadmap = f"MultiMindPM/roadmaps/{project_name.lower()}_roadmap.md"
+            if os.path.exists(project_roadmap):
+                # Use project-specific roadmap
+                shutil.copy(project_roadmap, os.path.join(project_path, "roadmap.md"))
+                print(f"  - {project_roadmap} → {project_path}/roadmap.md")
+            else:
+                # Fallback to main roadmap
+                shutil.copy("MultiMindPM/roadmap.md", os.path.join(project_path, "roadmap.md"))
+                print(f"  - roadmap.md → {project_path}/roadmap.md")
         except FileNotFoundError:
-            print(f"  ! Warning: MultiMindPM/roadmap.md not found")
+            print(f"  ! Warning: Roadmap file not found")
         
         # Copy directive file
         try:
@@ -203,6 +211,122 @@ def handle_handoffs(config: Dict) -> None:
     print("Handoff processing complete!")
 
 
+def report_completion(config: Dict, project_name: str, phase_id: str) -> None:
+    """
+    Process and record a project phase completion.
+    
+    This function:
+    1. Creates a completion marker file
+    2. Collects status reports
+    3. Notifies the PM of the completion
+    
+    Args:
+        config: The configuration dictionary
+        project_name: Name of the project that completed a phase
+        phase_id: Identifier for the completed phase
+    """
+    print(f"Processing completion report for {project_name} - {phase_id}...")
+    
+    # Validate project exists
+    project_found = False
+    project_path = ""
+    for project in config["projects"]:
+        if project["name"].lower() == project_name.lower():
+            project_found = True
+            project_path = project["path"]
+            project_name = project["name"]  # Use correct case
+            break
+    
+    if not project_found:
+        print(f"Error: Project '{project_name}' not found in config")
+        return
+    
+    # Ensure completions directories exist
+    pm_completions_dir = "MultiMindPM/completions"
+    output_completions_dir = "output/completions"
+    os.makedirs(pm_completions_dir, exist_ok=True)
+    os.makedirs(output_completions_dir, exist_ok=True)
+    
+    # Define completion filename
+    completion_file = f"{project_name}-{phase_id}-complete.md"
+    source_path = os.path.join(output_completions_dir, completion_file)
+    dest_path = os.path.join(pm_completions_dir, completion_file)
+    
+    # Check if completion marker exists
+    if os.path.exists(source_path):
+        # Copy to PM directory
+        shutil.copy(source_path, dest_path)
+        print(f"  - Completion marker copied: {source_path} → {dest_path}")
+    else:
+        # Create a basic completion marker
+        today = datetime.now().strftime('%Y-%m-%d')
+        with open(dest_path, 'w') as f:
+            f.write(f"""# Project Completion: {project_name} - {phase_id}
+
+Version: 0.1.0
+Completed: {today}
+Project: {project_name}
+Phase: {phase_id}
+
+## Completed Directives
+
+* Completion reported via command line
+* See status report for details
+
+## Notes
+
+Generated automatically by multimind.py complete command.
+
+## Next Phase
+
+Awaiting PM review and new directives.
+""")
+        print(f"  - Created basic completion marker: {dest_path}")
+    
+    # Gather status report
+    print(f"  - Collecting status report...")
+    status_file = None
+    for project in config["projects"]:
+        if project["name"] == project_name:
+            status_file = project["status_file"]
+            break
+    
+    if status_file:
+        source = os.path.join(project_path, "reports/status.md")
+        dest = os.path.join("MultiMindPM/reports", status_file)
+        try:
+            shutil.copy(source, dest)
+            print(f"  - Status report updated: {source} → {dest}")
+        except FileNotFoundError:
+            print(f"  ! Warning: Status report not found at {source}")
+    
+    # List all current completions
+    completions = []
+    if os.path.exists(pm_completions_dir):
+        for file in os.listdir(pm_completions_dir):
+            if file.endswith("-complete.md"):
+                completions.append(file)
+    
+    if completions:
+        print("\nCurrent phase completions:")
+        for completion in sorted(completions):
+            # Try to extract date from the file
+            date = "Unknown date"
+            try:
+                with open(os.path.join(pm_completions_dir, completion), 'r') as f:
+                    for line in f:
+                        if line.startswith("Completed:"):
+                            date = line.strip().split("Completed:")[1].strip()
+                            break
+            except:
+                pass
+            
+            print(f"  - {completion} [{date}]")
+    
+    print("\nCompletion report processed! The PM will review and update the roadmap.")
+    print("Run './multimind.py sync' later to receive updated directives.")
+
+
 def init_project(config: Dict, project_name: str) -> None:
     """
     Initialize a new project with the standard directory structure.
@@ -285,6 +409,11 @@ def main():
     # handoffs command
     handoffs_parser = subparsers.add_parser("handoffs", help="Process handoffs between projects")
     
+    # complete command
+    complete_parser = subparsers.add_parser("complete", help="Report project phase completion")
+    complete_parser.add_argument("project_name", help="Name of the project reporting completion")
+    complete_parser.add_argument("phase_id", help="Identifier for the completed phase")
+    
     # init command
     init_parser = subparsers.add_parser("init", help="Initialize a new project")
     init_parser.add_argument("project_name", help="Name of the new project")
@@ -303,6 +432,8 @@ def main():
         gather_reports(config)
     elif args.command == "handoffs":
         handle_handoffs(config)
+    elif args.command == "complete":
+        report_completion(config, args.project_name, args.phase_id)
     elif args.command == "init":
         init_project(config, args.project_name)
 

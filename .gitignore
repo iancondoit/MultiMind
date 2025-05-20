@@ -1,22 +1,71 @@
-# Ignore recipe-specific project directories
-/IngredientEngine/
-/NutritionCalc/
-/PageStyler/
-/RecipeDB/
+# Ignore example project directories
+# Add your own projects here or comment these lines out when using for real projects
+/ProjectOne/
+/ProjectTwo/
+/ProjectThree/
+
+# Example projects (safe to remove these lines when not using examples)
+/ExampleProject*/
+
+# Shared directories
 /output/
 
 # Keep the MultiMind core
 !/MultiMindPM/
 !/multimind.py
+!/*.md
+!/LICENSE
 
-# Exclude OS-specific files
-.DS_Store
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
 .env
 .venv
 env/
 venv/
-ENV/ 
+ENV/
+env.bak/
+venv.bak/
+
+# Editor and IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite
+*.db 

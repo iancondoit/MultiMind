@@ -62,4 +62,17 @@ The output should be a valid JSON file with the following structure:
 
 ## Dependencies
 
-This module depends on the ProjectOne module for its input and is required by the ProjectThree module, which expects the processed JSON as described above. 
+This module depends on the ProjectOne module for its input and is required by the ProjectThree module, which expects the processed JSON as described above.
+
+## Completion Reporting - IMPORTANT
+
+When you have completed all the tasks in this directive:
+
+1. Update your status report in `/reports/status.md` with details of what you've accomplished
+2. Create a completion marker file in `/output/completions/ProjectTwo-Phase1-complete.md` following the format in `/rules/completion_reporting.md`
+3. Run the following command to notify the Project Manager:
+   ```bash
+   ./multimind.py complete ProjectTwo Phase1
+   ```
+   
+This completion reporting is a critical part of the MultiMind workflow and must be performed when the phase is complete. 
