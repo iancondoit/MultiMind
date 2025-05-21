@@ -1,6 +1,6 @@
 # MultiMind User Guide
 
-Version: 0.3.0
+Version: 0.6.1
 
 ## Introduction
 
@@ -115,16 +115,43 @@ This copies:
 - Project-specific directives
 - AI instructions templates
 - Rules and protocols
+- Advisory responses
+
+Example output:
+```
+🔄 Syncing files from PM to projects...
+
+📂 Syncing to ProjectName...
+  ✓ README.md → ProjectName/README.md
+  ✓ roadmap.md → ProjectName/roadmap.md
+  ✓ MultiMindPM/directives/projectname.md → ProjectName/directives/projectname.md
+  ✓ Copied 3 rule files to ProjectName/rules/
+  ✅ Synced 4 items to ProjectName
+
+✅ Sync complete! Synced files to all active projects.
+   Run './multimind.py gather' to collect status reports and advisories from projects.
+```
 
 ### gather
 
-The `gather` command collects status reports from all projects:
+The `gather` command collects status reports and advisories from all projects:
 
 ```bash
 ./multimind.py gather
 ```
 
-This copies status reports from each project into the PM's reports directory.
+This copies status reports from each project into the PM's reports directory and processes any advisories.
+
+Example output:
+```
+📥 Gathering status reports from projects...
+
+📋 Gathering report from ProjectName...
+  ✓ ProjectName/reports/status.md → MultiMindPM/reports/projectname-status.md
+
+✅ Gather complete! Collected 1 status reports and processed 0 advisories.
+   Review the reports in MultiMindPM/reports/ to check project progress.
+```
 
 ### handoffs
 
@@ -138,6 +165,20 @@ This:
 1. Checks for new handoff files in `/output/handoffs/`
 2. Copies them to the PM's handoffs directory
 3. Lists all current handoffs and their status
+
+Example output:
+```
+🔄 Processing handoffs between projects...
+  ✓ New handoff: ProjectOne-to-ProjectTwo-data-format.md
+
+📋 Current handoffs:
+  • ProjectOne-to-ProjectTwo-data-format.md ⏳ [PENDING]
+
+📌 Tip: Update handoff statuses by editing the files in MultiMindPM/handoffs
+   Then run './multimind.py sync' to distribute the updated handoffs.
+
+✅ Handoff processing complete! 1 new handoffs found.
+```
 
 ### complete
 
@@ -156,6 +197,32 @@ This:
 2. Copies it to the PM's completions directory
 3. Updates the project's status report
 4. Lists all current phase completions
+5. Archives the phase materials
+
+Example output:
+```
+Processing completion report for ProjectName - Phase1...
+  ✓ Completion marker copied: output/completions/ProjectName-Phase1-complete.md → MultiMindPM/completions/ProjectName-Phase1-complete.md
+  ⟳ Collecting status report...
+  ✓ Status report updated: ProjectName/reports/status.md → MultiMindPM/reports/projectname-status.md
+
+📋 Current phase completions:
+  • ProjectName-Phase1-complete.md [2023-06-01]
+
+📦 Archiving phase materials for ProjectName - Phase1...
+  ✓ Archived completion report
+  ✓ Archived directive
+  ✓ Archived status report
+  ✓ Created phase summary template
+✅ Phase archiving complete! Archived 4 items to MultiMindPM/archives/ProjectName/Phase1
+
+✅ Completion report processed!
+
+📌 Next steps:
+  1. The PM will review your completion and update the roadmap
+  2. Run './multimind.py sync' later to receive updated directives
+  3. Begin work on the next phase once new directives are available
+```
 
 ### init
 
@@ -166,6 +233,63 @@ The `init` command creates a new project:
 ```
 
 This creates a new project with the standard directory structure and adds it to the configuration.
+
+### version
+
+The `version` command displays the current version of MultiMind:
+
+```bash
+./multimind.py version
+```
+
+Example output:
+```
+MultiMind v0.6.1
+Project Orchestration Tool
+https://github.com/yourusername/multimind
+```
+
+### create-scripts
+
+The `create-scripts` command generates local completion scripts for each project:
+
+```bash
+./multimind.py create-scripts
+# Or for a specific project:
+./multimind.py create-scripts --project ProjectName
+```
+
+This creates a custom `complete_phase.py` script in each project's `scripts` directory that can be run locally from within the project.
+
+Example output:
+```
+🔧 Creating completion scripts...
+  ✓ Created completion script for ProjectName at ProjectName/scripts/complete_phase.py
+✅ Successfully created 1 completion scripts
+   Projects can now use their local scripts/complete_phase.py to report completions
+```
+
+### archive
+
+The `archive` command explicitly archives a project phase:
+
+```bash
+./multimind.py archive ProjectName PhaseID
+```
+
+This collects all materials related to the phase and stores them in an organized archive structure.
+
+Example output:
+```
+📦 Archiving phase materials for ProjectName - Phase1...
+  ✓ Archived completion report
+  ✓ Archived directive
+  ✓ Archived status report
+  ✓ Archived 2 advisories
+  ✓ Created phase summary template
+✅ Phase archiving complete! Archived 5 items to MultiMindPM/archives/ProjectName/Phase1
+ℹ️ Tip: Don't forget to complete the phase summary document with lessons learned and decisions made.
+```
 
 ## Key Directories and Files
 
@@ -323,3 +447,31 @@ Here's a typical workflow for using MultiMind with multiple projects:
 9. The PM processes completions with `./multimind.py complete`
 10. The PM updates directives and roadmaps for the next phase
 11. The cycle continues with another sync operation 
+
+## Template System
+
+MultiMind uses a standardized template system with placeholders to generate project-specific files:
+
+### Template Placeholders
+
+Templates use these special placeholders:
+
+- `{{PROJECT_NAME}}`: Replaced with the actual project name
+
+### Template Locations
+
+- Advisory templates: `MultiMindPM/templates/advisories/`
+- Archive templates: `MultiMindPM/templates/archives/`
+- Decision templates: `MultiMindPM/templates/decisions/`
+- Completion script template: `MultiMindPM/templates/complete_phase.py`
+
+These templates are used to generate standardized documents across all projects while keeping project-specific information consistent.
+
+## Active vs. Template Projects
+
+MultiMind distinguishes between template projects and active projects:
+
+- **Template Projects**: ProjectOne, ProjectTwo, and ProjectThree are considered template projects
+- **Active Projects**: Any other project, or template projects that have a status.md file
+
+Commands like `sync`, `gather`, and `create-scripts` automatically skip inactive template projects, focusing only on projects with actual development activity. 
