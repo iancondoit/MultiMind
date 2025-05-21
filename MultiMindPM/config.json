@@ -23,6 +23,12 @@
       "path": "MasterBus",
       "directive_file": "masterbus.md",
       "status_file": "masterbus-status.md"
+    },
+    {
+      "name": "VoltMetrics",
+      "path": "VoltMetrics",
+      "directive_file": "voltmetrics.md",
+      "status_file": "voltmetrics-status.md"
     }
   ]
 }

@@ -24,44 +24,39 @@ Version: 0.1.0
 * Created ThreatMap analysis document (docs/threatmap-analysis.md)
 * Updated API specification based on codebase analysis
 
-## PM Summary
+## Key Findings
 
-The MasterBus project has successfully completed the initial setup and Discovery phase has begun. We have cloned and analyzed both the Condoit and ThreatMap codebases to understand their structure, data models, and integration requirements.
+### Condoit Analysis
+* Monorepo structure with apps (webapp-remix, mobileapp, eventbus) and shared packages
+* Uses Prisma ORM with PostgreSQL database
+* Rich data models for electrical equipment (panels, transformers, etc.)
+* Contains the raw data needed for risk assessments (age, materials, etc.)
+* The eventbus app could provide a way to subscribe to data changes
 
-### Key Findings
+### ThreatMap Analysis
+* Next.js application with TypeScript and Tailwind
+* Expects facility data with risk scores, compliance status, and equipment details
+* Visualizes risk using multiple charts and a geographic map
+* Requires calculated fields (risk scores, compliance percentages, etc.)
+* Currently uses mock data that defines the expected data structure
 
-1. **Condoit Codebase**:
-   - Monorepo structure with multiple apps and shared packages
-   - Rich data models for electrical equipment managed through Prisma ORM
-   - Contains comprehensive raw data about electrical infrastructure
-   - Event bus component might be leveraged for real-time data synchronization
+### Data Transformation Requirements
+* Calculate equipment risk scores based on age, materials, and inspection status
+* Aggregate metrics at facility level (equipment counts, risk distribution)
+* Evaluate NFPA 70B and 70E compliance status
+* Generate historical trends for risk metrics
 
-2. **ThreatMap Requirements**:
-   - Needs processed risk assessment data in specific JSON formats
-   - Visualizes facility-level risk scores and equipment-level risk factors
-   - Requires calculated fields for compliance status and risk metrics
-   - Uses historical data for trend visualization
+## Blockers
 
-3. **Data Transformation Needs**:
-   - Equipment risk score calculation based on multiple factors
-   - Facility-level aggregation of risk metrics
-   - Compliance evaluation for NFPA standards
-   - Historical trend data generation
+* Need detailed information about electrical risk assessment factors
+* Need confirmation on technology stack preferences for MasterBus
+* Need to determine authentication mechanism for API
+* Need more information on NFPA 70B/70E standards and their compliance requirements
 
-### Next Steps
+## Next Steps
 
-1. Research NFPA standards to establish compliance calculation methods
-2. Design risk assessment algorithms with domain expertise
-3. Create a database schema for the MasterBus service
-4. Design authentication and security mechanisms
-5. Implement core data models and transformation services
-
-### Blockers
-
-* Need domain expertise to define risk calculation formulas
-* Require technology stack decisions for the MasterBus service
-* Need authentication/security requirements clarification
-
-### Timeline Update
-
-We are on track with the Phase 1 timeline. We anticipate completion of the Discovery phase within the original timeframe, pending clarification on the blocker items.
+* Research NFPA 70B and 70E standards for compliance metrics
+* Develop risk calculation algorithms with domain experts
+* Create MasterBus database schema for caching and historical data
+* Design authentication system for the API
+* Begin implementing core data models and transformation services
