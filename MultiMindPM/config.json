@@ -17,6 +17,12 @@
       "path": "ProjectThree",
       "directive_file": "project_three.md",
       "status_file": "project_three-status.md"
+    },
+    {
+      "name": "MasterBus",
+      "path": "MasterBus",
+      "directive_file": "masterbus.md",
+      "status_file": "masterbus-status.md"
     }
   ]
 }
