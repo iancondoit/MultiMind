@@ -1,6 +1,6 @@
 # MultiMind
 
-Version: 0.3.0
+Version: 0.3.1
 
 A modular orchestration tool for coordinating multiple, interdependent software projects with AI agent support.
 
@@ -83,11 +83,26 @@ MultiMind synchronizes requirements, roadmaps, status reports, and coding standa
 
 MultiMind includes a robust completion reporting system that allows projects to notify the Project Manager when they complete a phase:
 
-1. When a project finishes a significant phase, it creates a completion marker file in the `/output/completions/` directory
-2. The marker follows a standardized format defined in `/MultiMindPM/rules/completion_reporting.md`
-3. The project then runs `./multimind.py complete [ProjectName] [PhaseID]` to notify the PM
-4. The PM reviews the completion, updates the roadmap, and provides new directives
-5. Project-specific roadmaps can be created in `MultiMindPM/roadmaps/projectname_roadmap.md`
+1. When a project finishes a significant phase, run the completion command **from the root directory**:
+   ```
+   ./multimind.py complete [ProjectName] [PhaseID]
+   ```
+
+2. Important: The multimind.py command must be run from the root directory of the workspace, not from your project directory.
+
+3. This will:
+   - Create a completion marker in the PM's completions directory
+   - Copy your latest status report to the PM
+   - Signal to the PM that you're ready for the next phase
+
+4. The PM will then:
+   - Review the completion and status report
+   - Update the roadmap and directives
+   - Sync the updated directives back to your project
+
+5. If your project has a specific roadmap, it will be updated in `MultiMindPM/roadmaps/projectname_roadmap.md`
+
+6. Detailed completion reporting instructions are included in each project's directives file.
 
 ## AI Integration
 

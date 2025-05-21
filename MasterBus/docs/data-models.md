@@ -1,14 +1,12 @@
 # MasterBus Data Models
 
-Version: 0.1.0
+Version: 0.2.0
 Created: 2025-05-20
-Status: Draft
+Status: Completed
 
 ## Overview
 
 This document outlines the data models used within MasterBus and the mapping between Condoit data structures and ThreatMap requirements. The models represent the transformation of electrical infrastructure data into risk assessment information.
-
-*Note: This document will be refined after detailed analysis of the Condoit and ThreatMap codebases.*
 
 ## Core Entities
 

@@ -1,10 +1,13 @@
 # Project Completion Reporting Protocol
 
-Version: 0.1.0
+Version: 0.2.0
+Updated: 2025-05-24
 
 ## Overview
 
 This document defines the standardized protocol for reporting project phase completions to the Project Manager. This ensures the PM can accurately track progress and coordinate work across projects.
+
+**IMPORTANT**: This protocol applies to ALL project phases (Phase 1, 2, 3, etc.), not just Phase 1. Each time you complete a phase in your project roadmap, follow these exact same steps.
 
 ## Completion Report Structure
 
