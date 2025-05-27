@@ -1,0 +1,83 @@
+# StoryDredge Pipeline Configuration
+
+# Logging configuration
+logging:
+  level: "INFO"
+  log_dir: "logs"
+  console_logging: true
+  file_logging: true
+  max_log_size_mb: 10
+  backup_count: 5
+
+# Progress reporting configuration
+progress:
+  enabled: true
+  report_interval_seconds: 0.2
+  show_spinner: true
+  show_progress_bar: true
+  show_metrics: true
+  show_eta: true
+  verbose: false
+
+# Global pipeline configuration
+parallel_processes: 32
+cache_dir: "cache"
+output_dir: "output"
+temp_dir: "temp"
+
+# Component configurations
+fetcher:
+  enabled: true
+  debug_mode: false
+  timeout_seconds: 120
+  rate_limit_requests: 1500
+  rate_limit_period_seconds: 60
+  max_retries: 3
+  retry_delay_seconds: 1
+  backoff_factor: 1.5
+  user_agent: "StoryDredge Pipeline/1.0"
+
+cleaner:
+  enabled: true
+  debug_mode: false
+  timeout_seconds: 300
+  normalize_whitespace: true
+  normalize_punctuation: true
+  normalize_quotes: true
+  fix_ocr_errors: true
+  remove_boilerplate: true
+  min_content_length: 50
+
+splitter:
+  enabled: true
+  debug_mode: false
+  timeout_seconds: 600
+  headline_detection_threshold: 0.7
+  min_article_length: 100
+  max_article_length: 10000
+  enable_fuzzy_boundaries: true
+  remove_advertisements: true
+  quality_threshold: 0.5
+
+classifier:
+  enabled: true
+  debug_mode: false
+  timeout_seconds: 900
+  model_name: "llama2"
+  batch_size: 10
+  concurrency: 2
+  prompt_template: "classifier_prompt.txt"
+  confidence_threshold: 0.6
+  fallback_section: "miscellaneous"
+
+formatter:
+  enabled: true
+  debug_mode: false
+  timeout_seconds: 60
+  validate_output: true
+  organize_by_date: true
+  output_format: "json"
+  include_metadata: true
+  pretty_print: true
+  strict_validation: false
+  add_default_values: true 

@@ -1,0 +1,66 @@
+# StoryDredge Pipeline Configuration
+
+# Overall pipeline settings
+parallel_processes: 4
+enable_checkpointing: true
+max_retries: 3
+
+# Fetcher configuration
+fetcher:
+  rate_limit: 100  # requests per minute
+  timeout: 30
+  max_retries: 3
+  cache_dir: "cache"
+
+# OCR Cleaner configuration
+cleaner:
+  remove_noise: true
+  fix_ocr_errors: true
+  normalize_whitespace: true
+  min_text_length: 50
+
+# Article Splitter configuration
+splitter:
+  headline_detection_threshold: 0.7
+  min_article_length: 100
+  max_article_length: 10000
+  enable_fuzzy_boundaries: true
+  remove_advertisements: true
+  quality_threshold: 0.5
+  aggressive_mode: false
+
+# Article Classifier configuration
+classifier:
+  model_name: "llama2"
+  skip_classification: true  # Set to true to skip LLM classification
+  use_rule_based: true
+  concurrency: 2
+  batch_size: 10
+  cache_enabled: true
+  cache_dir: "cache/classifications"
+  temperature: 0.7
+  max_tokens: 1000
+
+# HSA Formatter configuration
+formatter:
+  output_format: "json"
+  include_metadata: true
+  organize_by_date: true
+  create_index: true
+
+# Database configuration
+database:
+  host: "localhost"
+  port: 5433
+  name: "storymap"
+  user: "postgres"
+  password: "postgres"
+  batch_size: 1000
+  max_connections: 10
+
+# Logging configuration
+logging:
+  level: "INFO"
+  file: "logs/pipeline.log"
+  max_size: "10MB"
+  backup_count: 5 

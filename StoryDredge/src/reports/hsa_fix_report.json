@@ -1,0 +1,14 @@
+{
+  "base_directory": "output/hsa-ready-clean",
+  "validation_report": "reports/hsa_validation.json",
+  "summary": {
+    "total_issues": 7,
+    "fixed_issues": 7,
+    "failed_fixes": 0,
+    "success_rate": 100.0
+  },
+  "by_issue_type": {
+    "null_headline": 5,
+    "null_body": 2
+  }
+}

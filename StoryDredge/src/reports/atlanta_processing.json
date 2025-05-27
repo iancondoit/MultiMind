@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-05-11T18:02:27.618132",
+  "source_base": "output",
+  "target_directory": "output/hsa-ready-clean",
+  "summary": {
+    "total_files": 20,
+    "processed_files": 20,
+    "skipped_files": 0,
+    "success_rate": 100.0
+  },
+  "by_issue": {
+    "per_atlanta-constitution_1922-01-01_54_203": {
+      "total": 20,
+      "processed": 20,
+      "skipped": 0
+    },
+    "per_atlanta-constitution_1922-01-02_54_204": {
+      "total": 0,
+      "processed": 0,
+      "skipped": 0
+    }
+  }
+}

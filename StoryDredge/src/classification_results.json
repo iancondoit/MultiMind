@@ -1,0 +1,28 @@
+{
+  "successful": [
+    "per_atlanta-constitution_1922-01-01_54_203"
+  ],
+  "failed": [
+    "per_atlanta-constitution_1922-01-02_54_204",
+    "per_atlanta-constitution_1922-01-03_54_205",
+    "per_atlanta-constitution_1922-01-04_54_206",
+    "per_atlanta-constitution_1922-01-05_54_207",
+    "per_atlanta-constitution_1922-01-06_54_208",
+    "per_atlanta-constitution_1922-01-07_54_209",
+    "per_atlanta-constitution_1922-01-08_54_210",
+    "per_atlanta-constitution_1922-01-09_54_211",
+    "per_atlanta-constitution_1922-01-10_54_212",
+    "per_atlanta-constitution_1922-01-11_54_213",
+    "per_atlanta-constitution_1922-01-12_54_214",
+    "per_atlanta-constitution_1922-01-13_54_215",
+    "per_atlanta-constitution_1922-01-14_39_323",
+    "per_atlanta-constitution_1922-01-15_54_217",
+    "per_atlanta-constitution_1922-01-16_54_218",
+    "per_atlanta-constitution_1922-01-17_54_219",
+    "per_atlanta-constitution_1922-01-18_54_220",
+    "per_atlanta-constitution_1922-01-19_54_221",
+    "per_atlanta-constitution_1922-01-20_54_222"
+  ],
+  "total_issues": 20,
+  "processing_time": "0h 0m 0s"
+}

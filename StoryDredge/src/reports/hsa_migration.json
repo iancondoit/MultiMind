@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-05-12T00:35:53.947234",
+  "source_directory": "output/hsa-ready",
+  "target_directory": "output/hsa-ready-final",
+  "summary": {
+    "total_files": 1559,
+    "migrated_files": 1559,
+    "skipped_files": 0,
+    "fixed_files": 0,
+    "success_rate": 100.0
+  },
+  "by_publication": {
+    "atlanta-constitution": 1559
+  },
+  "by_year": {
+    "1922": 1559
+  }
+}

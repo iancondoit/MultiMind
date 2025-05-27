@@ -1,0 +1,433 @@
+{
+  "timestamp": "2025-05-11T17:56:44.486792",
+  "base_directory": "output/hsa-ready",
+  "summary": {
+    "total_files": 274,
+    "valid_files": 274,
+    "invalid_files": 0,
+    "percent_valid": 100.0
+  },
+  "publications": {
+    "San Antonio Express-News": 274
+  },
+  "years": {
+    "1975": 19,
+    "1974": 81,
+    "1977": 163,
+    "1970": 11
+  },
+  "monthly_distribution": {
+    "1975-01": {},
+    "1974-04": {},
+    "1977-08": {},
+    "1970-01": {}
+  },
+  "missing_fields": {},
+  "unique_sections": [
+    "editorial",
+    "news",
+    "unknown"
+  ],
+  "file_issues": [
+    {
+      "path": "1975/01/01/1975-01-01--by-p-et-er-bodo.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--in-tr-ic-a-te.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--that-murray-why-am-i.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--nyse-index-daily-close-scale-o-n-left.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--associated-press-washington.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--associated-press-saigon.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--intensos-com-bates-en-la-indochina.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--t-exa-s-w-e-a-t-h-e-r.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--oo-south-c-en-t-ra-l.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--mccreless-plaza-s346151.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--the-shoe-box.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--come-see-and-save.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--for-further-information-call-9248551-or-visit-hall.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--mes-robert-kennedy-wonder-world-of-fabrics.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--baylor-defensive-line-coach-bill-lane-looks-down-l.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--new-york-times-service-washington-a.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--s-o-u-t-h-a-n-d-s-o-u-t-h-e-a-s-t.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--young-boy-meditates.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1975/01/01/1975-01-01--military-at-fiores.json",
+      "issue": "Invalid timestamp format: 1975-01-01"
+    },
+    {
+      "path": "1974/04/27/1974-04-27--sv-3-1-1-1-si-14.json",
+      "issue": "Invalid timestamp format: 1974-04-27"
+    },
+    {
+      "path": "1974/04/27/1974-04-27--st-john-lutheran-church.json",
+      "issue": "Invalid timestamp format: 1974-04-27"
+    },
+    {
+      "path": "1974/04/27/1974-04-27--a-ot-pa-27.json",
+      "issue": "Invalid timestamp format: 1974-04-27"
+    },
+    {
+      "path": "1974/04/27/1974-04-27--mid-1174-1285-mfo.json",
+      "issue": "Invalid timestamp format: 1974-04-27"
+    },
+    {
+      "path": "1974/04/27/1974-04-27--waibuyi-b-a-rg-a-in-71-foro.json",
+      "issue": "Invalid timestamp format: 1974-04-27"
+    },
+    {
+      "path": "1974/04/27/1974-04-27--gas-or-electric.json",
+      "issue": "Invalid timestamp format: 1974-04-27"
+    },
+    {
+      "path": "1974/04/27/1974-04-27--ph-2242751-ph-9244838-ph-2276128-master-charge.json",
+      "issue": "Invalid timestamp format: 1974-04-27"
+    },
+    {
+      "path": "1974/04/27/1974-04-27--him-for-iti.json",
+      "issue": "Invalid timestamp format: 1974-04-27"
+    },
+    {
+      "path": "1974/04/27/1974-04-27--m25-m-so-1515-3s11-36.json",
+      "issue": "Invalid timestamp format: 1974-04-27"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--now-thru-july-11974.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--young-mens-shop-frank-bros.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--county-extrusion-horticulture.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--expressnews-mini-pace-saturday-april-1-3-1974.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--i-express-news.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--expressnews-sports-final-saturday-april-13-1974-sa.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--screenplay-from-another-medium-best-sound.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--tyler-mooiu-show.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--di5tribu1ion-system-improvements.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--c-v-hughes.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--us-environmental-protec.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--express-ncws-capitol-uureau.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--etxiressnews-capitol-dureau.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--south-and-southeast-te.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--freoericksburg-square-3951-freder1cksburo-rd-73658.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--acxdwtawaid-nominatjonu-best-picture.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--associated-press-washington.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--op-un-3unday-u-pm.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--apartment-communities-by-ray-ellison-developments-.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--water-quality-management-program-for-f-i-s-c-a-l-y.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--the-travelers-insurance-companies.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--century-south-6-ream-iast-summer-spikes-harry-in-y.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--on-materials-1-year-installation-guarantee.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--raymond-e-leu-beeville.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/13/1974-04-13--k-er-bo-so-6-6-4-2-5-2-4.json",
+      "issue": "Invalid timestamp format: 1974-04-13"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--life-is-always-exciting-in-americas-liveliest-news.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--the-unmaking-o-the-presided.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--does-your-smile-hide-a.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--glad-to-have-you-with-us-call-for-curb-on-movie.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--i-ohiyconkmpotary-stcrio-caiinet.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--page-42-the-national-star-afrilm-1971-hes-the-big-.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--tragedy-of-a-stars-ban-on-babies.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--cisco-kid-and-poncho-ride-again-and-again-americas.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--shop-la-feria-now-savings-shop-la-feria-no.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--sky-high-salaries-have-fire-chief-burning.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--case-of-the-student-case-of-the-teacher.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--build-your-own-race-car.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--aa-411-a.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--ramirez-jr-alley-talk.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--south-and-southeast-t-e-x-a-s-vest-1-l-x-a-s.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--nashville-sound-singer-sayshesnodrunk.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--dancing-one-more-week.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--v-19v4-114.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--super-star-sports-what-your-job.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--glad-to-have-you-with-us.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--be-your-own-tv-critic.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--now-is-a-good-time-to-move-to-from.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--great-mexican-museum.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--the-star-says.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--associated-press-washington.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--exclusive-another-star-exclusive.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--if-its-in-bad-taste.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--nohth-star-mam.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--see-your-diamond-weight-verified-by-electronic-sca.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--los-angeles-houstom.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--vote-to-promote-judge-fred-clark-to-district-judge.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--butkus-blitzes-las-vegas.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--mens-clothing-frank-bros.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--monday-in-the.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--mow-hbarthis-now-hear-this-now-hear-this.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--riverside-pro-am.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--associated-press-leningrad.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--this-is-judge-fred-clark-the-peoples-judge.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--my-sons-agony-by-teddy-kennedy.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--save-261-on-scissor-jack.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--ryan-oneal-sumco.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--opium-fight-hits-the.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--white-sands-missile-rante.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--watch-for-rigby-every-week-the-worlds-greatest-car.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--fok-a-limited-time-only.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--glad-to-have-you-with-us-human-skin-is-farmed.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    },
+    {
+      "path": "1974/04/14/1974-04-14--doors-open-upfortyne.json",
+      "issue": "Invalid timestamp format: 1974-04-14"
+    }
+  ]
+}

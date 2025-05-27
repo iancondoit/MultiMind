@@ -1,0 +1,21 @@
+{
+  "title": "Test Article 3",
+  "raw_text": "This is the content of test article 3. It contains sample text for testing the formatter.",
+  "source_issue": "per_atlanta-constitution_1922-01-01_54_203",
+  "category": "business",
+  "metadata": {
+    "topic": "Politics",
+    "people": [
+      "John Doe",
+      "Jane Smith"
+    ],
+    "organizations": [
+      "Acme Corp",
+      "Government"
+    ],
+    "locations": [
+      "Atlanta",
+      "Georgia"
+    ]
+  }
+}

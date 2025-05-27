@@ -1,0 +1,66 @@
+# CRITICAL: Large data directories - DO NOT INDEX
+# These directories contain 9.7GB+ of downloaded newspaper data
+cache/
+cache/**
+cache/**/*
+*.txt
+
+# Additional protection for cache subdirectories
+cache/**/
+cache/**/*.txt
+cache/**/*.json
+
+# Log files - including large download logs
+logs/
+logs/**
+*.log
+download_*.log
+*_download.log
+
+# Temporary files
+temp_*/
+*_temp/
+temp_*/**
+
+# Large data directories
+data/
+data/**
+output/
+output/**
+
+# Downloaded files protection
+*.djvu.txt
+*_djvu.txt
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+.venv/**
+venv/
+venv/**
+env/
+env/**
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Additional large directories that might be created
+archive/
+archive/**
+backup/
+backup/**
+downloads/
+downloads/** 

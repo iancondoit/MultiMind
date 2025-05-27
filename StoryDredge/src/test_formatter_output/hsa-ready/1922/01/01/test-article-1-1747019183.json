@@ -1,0 +1,19 @@
+{
+  "headline": "Test Article 1",
+  "body": "This is the content of test article 1. It contains sample text for testing the formatter.",
+  "tags": [
+    "news",
+    "politics",
+    "john doe",
+    "jane smith",
+    "acme corp",
+    "government",
+    "atlanta",
+    "georgia"
+  ],
+  "section": "news",
+  "timestamp": "1922-01-01T00:00:00.000Z",
+  "source_issue": "per_atlanta-constitution_1922-01-01_54_203",
+  "source_url": "https://archive.org/details/per_atlanta-constitution_1922-01-01_54_203",
+  "publication": "Atlanta Constitution"
+}

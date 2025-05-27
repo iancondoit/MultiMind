@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # StoryDredge API service for sending processed articles to StoryMap
+  storydredge-api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.storydredge
+    ports:
+      - "8081:8080"  # Different port from main API
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5433  # Updated to match the host port
+      - DB_NAME=storymap
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    depends_on:
+      - db
+
+  # PostgreSQL database for storing processed articles
+  db:
+    image: postgres:14
+    environment:
+      - POSTGRES_DB=storymap
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"  # Changed external port to 5433
+
+volumes:
+  postgres_data: 

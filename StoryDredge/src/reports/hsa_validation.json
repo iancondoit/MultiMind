@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-05-11T18:03:27.580263",
+  "base_directory": "output/hsa-ready-clean",
+  "summary": {
+    "total_files": 278,
+    "valid_files": 278,
+    "invalid_files": 0,
+    "percent_valid": 100.0
+  },
+  "publications": [
+    "atlanta_constitution",
+    "san_antonio_express-news"
+  ],
+  "by_publication": {
+    "atlanta_constitution": {
+      "years": [
+        "1922"
+      ]
+    },
+    "san_antonio_express-news": {
+      "years": [
+        "1975",
+        "1974",
+        "1977",
+        "1970"
+      ]
+    }
+  },
+  "organizational_issues": [],
+  "validation_errors": []
+}
